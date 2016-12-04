@@ -1,0 +1,93 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css");
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #62c1f2 !important;
+  font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+.container {
+  width: 400px;
+  padding: 10px 20px;
+  height: 350px;
+}
+
+/*.login__container-item:before {
+  content: "\F0C2";
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  position: absolute;
+  font-size: 150px;
+  color: lightblue;
+  top: 50%;
+  left: 50%;
+  margin: -200px 0 0 -150px;
+  z-index: 1;
+  opacity: .09;
+}*/
+
+.weather {
+  text-align: center;
+}
+
+.weather h2 {
+  font-size: 5em;
+  margin-bottom: 0px;
+}
+
+.weather span {
+  font-size: 2em;
+}
+
+.weather .icon{
+  font-size: 1em;
+}
+
+.clock {
+  text-align: center;
+}
+
+.clock i {
+  font-size: 1.5em;
+}
+
+.loader {
+  height: 350px;
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loder div {
+  text-align: center;
+  width: 50%;
+}
+
+.loader div i {
+  font-size: 2em;
+}
+
+.additional-info {
+    text-align: left;
+    margin-left: 5%;
+}
+
+.additional-info ul li {
+  float: left;
+  list-style: none;
+  margin-left: 7%;
+  font-size: 1.1em;
+}

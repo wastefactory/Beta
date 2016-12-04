@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello World</title>
+    <link href="assets/styles/main.css" rel="stylesheet">
+  </head>
+  <body ng-app="app">
+    <div class="container" ng-controller="mainController">
+      <div class="login__container-item">
+    		<div ng-show="city.name">
+    			<div class="pull-left">
+    				<h4>{{city.name}}, {{city.sys.country}}</h4>
+    				<span>{{date | date:'EEEE'}}</span>
+    			</div>
+    			<div class="pull-right clock">
+    				<i class="fa fa-clock-o"></i>
+    				<p>{{date | date:'HH:mm'}}</p>
+    			</div>
+    			<div style="clear:both"></div>
+    			<div class="weather">
+    				<h2>
+              <i class="icon wi {{city.weather[0].flat_icon}}"></i>
+    					<div>{{city.main.temp | number:0}}&deg;C</div>
+    				</h2>
+    				<span>{{city.weather[0].description}}</span>
+    			</div>
+          <div class="additional-info">
+            <ul>
+              <li>Humidity : {{city.main.humidity}}%</li>
+              <li>Wind : {{city.wind.speed}} km/p</li>
+            </ul>
+          </div>
+    		</div>
+    		<div class="loader" ng-hide="city.name">
+    			<div><i class="fa fa-spinner fa-spin"></i></div>
+    		</div>
+    	</div>
+    </div>
+  </body>
+  <script src="../node_modules/angular/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="app/services/data.service.js"></script>
+  <script src="app/components/main/main.js"></script>
+  <script src="app/components/main/main.service.js"></script>
+</html>
